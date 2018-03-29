@@ -11,12 +11,11 @@ import java.util.Scanner;
  *
  * @author Praktikan
  */
-public class sumoffabocini {
+public class reversefabocini {
     public static void main(String[]args) {
         Scanner show = new Scanner(System.in);
         System.out.print("Masukan Jumlah Deret Fibonacci : ");
         int n = show.nextInt();
-        long sum = 0;
         long fib[] = new long[n];
 
         fib[0] = 1;
@@ -26,11 +25,8 @@ public class sumoffabocini {
             fib[i] = fib[i-1] + fib[i-2];
         }
 
-        for (int i = 0; i < n; i++) {
-            sum = sum + fib[i];
+        for (int i = n-1; i >= 0; i--) {
+           System.out.print(fib[i] +  " ");
         }
-        System.out.println(sum);
     }
-
 }
-
