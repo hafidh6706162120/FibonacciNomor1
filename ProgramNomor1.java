@@ -11,15 +11,12 @@ import java.util.Scanner;
  *
  * @author Praktikan
  */
-public class ProgramNomor1 {
-
-    /**
-     * @param args the command line arguments
-     */
+public class sumoffabocini {
     public static void main(String[]args) {
         Scanner show = new Scanner(System.in);
         System.out.print("Masukan Jumlah Deret Fibonacci : ");
         int n = show.nextInt();
+        long sum = 0;
         long fib[] = new long[n];
 
         fib[0] = 0;
@@ -30,8 +27,9 @@ public class ProgramNomor1 {
         }
 
         for (int i = 0; i < n; i++) {
-            System.out.print(fib[i] +  " ");
+            sum = sum + fib[i];
         }
+        System.out.println(sum);
     }
- 
+
 }
